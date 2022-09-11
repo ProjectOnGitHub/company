@@ -8,7 +8,7 @@
   </head>
   <body>
     <header class="header">
-      <nav class="navigation">
+      <nav class="header__navigation">
         <ul class="header__menu">
           <li class="header__menu-item">Çözüm ve Hizmetler</li>
           <li class="header__menu-item">Ürünler</li>
@@ -21,7 +21,35 @@
         </button>
       </nav>
     </header>
-    <main class="main"></main>
+    <main class="main">
+      <section class="promo">
+        <div class="promo__container">
+          <h1 class="promo__title">Bilgi Teknolojilerinde 23 Yıllık Tecrübe</h1>
+          <p class="promo__text">
+            Müşterilerimizin yüksek kalite seviyelerini koruyabilmeleri için
+            farklı sektörlerde tecrübe kazanmış uzman kadrolarımızla Proje
+            Yönetimi, İş Analizi ve Test Yönetimi hizmetleri sunmaktayız.
+          </p>
+          <form name="subscription" class="promo__form">
+            <fieldset class="promo__fieldset">
+              <input
+                type="email"
+                name="email"
+                placeholder="Mail bültenimize kayıt ol"
+                class="promo__input"
+              />
+              <button
+                type="submit"
+                class="promo__button"
+                name="subscribe-button"
+              >
+                Kayıt Ol
+              </button>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+    </main>
     <footer class="footer"></footer>
   </body>
 </html>
