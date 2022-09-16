@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 module.exports = {
   entry: { main: './src/index.js' },
@@ -27,8 +28,16 @@ module.exports = {
         exclude: '/node_modules/',
       },
       {
-        test: /\.(png|svg|jpg|gif|woff(2)?|eot|ttf|otf)$/,
+        test: /\.(png|jpg|gif|woff(2)?|eot|ttf|otf)$/,
         type: 'asset/resource',
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          'svg-sprite-loader',
+          'svg-transform-loader',
+          'svgo-loader',
+        ],
       },
       {
         test: /\.(s*)css$/,
@@ -48,5 +57,9 @@ module.exports = {
     }),
     new CleanWebpackPlugin(), // использовали плагин
     new MiniCssExtractPlugin(), // подключение плагина для объединения файлов
+    new SpriteLoaderPlugin({
+      plainSprite: true,
+    }),
+
   ],
 };
