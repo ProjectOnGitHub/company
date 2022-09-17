@@ -29,7 +29,7 @@
   transition: text-decoration 1s ease;
 }
 
-@mixin button($width, $bRadius) {
+@mixin button($width, $height, $b-radius) {
   @include flexible($width);
   justify-content: center;
   align-items: center;
@@ -38,10 +38,16 @@
   border: none;
   background-color: $color-red;
   color: $color-white;
-  border-radius: $bRadius;
+  border-radius: $b-radius;
+  height: $height;
 }
 
-@mixin centeredTitle {
+@mixin title {
+  margin: 0;
   font-weight: 800;
-  text-align: center;
+}
+
+@mixin text {
+  margin: 0;
+  font-weight: 400;
 }

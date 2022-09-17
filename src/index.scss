@@ -1,6 +1,6 @@
 @import '../scss/mixins';
 @import '../scss/variables';
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap');
 
 .root {
   @include gridable(100%);
@@ -9,6 +9,7 @@
   justify-items: center;
   align-items: center;
   @include basicFont();
+  background: url(../src/images/bg-header.png) center top no-repeat;
 }
 
 .header,
@@ -18,6 +19,17 @@
   box-sizing: border-box;
   max-width: $max-width;
   padding: 0 20px;
+}
+
+.promo,
+.services,
+.test,
+.information,
+.clients,
+.contact-us {
+  @include gridable(100%);
+  box-sizing: border-box;
+  grid-template-columns: 1fr;
 }
 
 .header {
@@ -44,8 +56,61 @@
     gap: 40px;
   }
   &__button {
-    @include button(91px, 5px);
+    @include button(91px, 40px, 5px);
     height: 40px;
+  }
+}
+
+.promo {
+  padding-left: 122px;
+  padding-top: 90px;
+  padding-bottom: 148px;
+  &__container {
+    @include gridable(100%);
+    grid-template-columns: 1fr;
+    max-width: 665px;
+  }
+  &__title {
+    @include title();
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 1.28;
+    margin-bottom: 10px;
+  }
+  &__text {
+    @include text();
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 50px;
+  }
+  &__form {
+    width: 100%;
+  }
+  &__fieldset {
+    @include gridable(100%);
+    grid-template-areas: 'area';
+    align-items: center;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    max-width: 502px;
+    justify-items: end;
+  }
+  &__input {
+    box-sizing: border-box;
+    grid-area: area;
+    padding-left: 32px;
+    background-color: $color-white;
+    border: none;
+    border-radius: 8px;
+    height: 73px;
+    max-width: 502px;
+    width: 100%;
+  }
+  &__button {
+    @include button(136px, 61px, 8px);
+    margin-right: 6px;
+    grid-area: area;
   }
 }
 
