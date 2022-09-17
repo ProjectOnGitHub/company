@@ -7,369 +7,385 @@
     <title>Main page | Company</title>
   </head>
   <body>
-    <header class="header">
-      <nav class="header__navigation">
-        <ul class="header__menu">
-          <li class="header__menu-item">
-            <a class="header__link">Çözüm ve Hizmetler</a>
-          </li>
-          <li class="header__menu-item"><a class="header__link">Ürünler</a></li>
-          <li class="header__menu-item">
-            <a class="header__link">Teknolojiler</a>
-          </li>
-          <li class="header__menu-item">
-            <a class="header__link">İnsan Kaynakları</a>
-          </li>
-          <li class="header__menu-item">
-            <a class="header__link">Kurumsal</a>
-          </li>
-        </ul>
-        <button class="header__button" name="contact-button" type="button">
-          İletişim
-        </button>
-      </nav>
-    </header>
-    <main class="main">
-      <section class="promo">
-        <div class="promo__container">
-          <h1 class="promo__title">Bilgi Teknolojilerinde 23 Yıllık Tecrübe</h1>
-          <p class="promo__text">
+    <div class="root">
+      <header class="header">
+        <nav class="header__navigation">
+          <ul class="header__menu">
+            <li class="header__menu-item">
+              <a class="header__link">Çözüm ve Hizmetler</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__link">Ürünler</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__link">Teknolojiler</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__link">İnsan Kaynakları</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__link">Kurumsal</a>
+            </li>
+          </ul>
+          <button class="header__button" name="contact-button" type="button">
+            İletişim
+          </button>
+        </nav>
+      </header>
+      <main class="main">
+        <section class="promo">
+          <div class="promo__container">
+            <h1 class="promo__title">
+              Bilgi Teknolojilerinde 23 Yıllık Tecrübe
+            </h1>
+            <p class="promo__text">
+              Müşterilerimizin yüksek kalite seviyelerini koruyabilmeleri için
+              farklı sektörlerde tecrübe kazanmış uzman kadrolarımızla Proje
+              Yönetimi, İş Analizi ve Test Yönetimi hizmetleri sunmaktayız.
+            </p>
+            <form name="subscription" class="promo__form">
+              <fieldset class="promo__fieldset">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Mail bültenimize kayıt ol"
+                  class="promo__input"
+                />
+                <button
+                  type="submit"
+                  class="promo__button"
+                  name="subscribe-button"
+                >
+                  Kayıt Ol
+                </button>
+              </fieldset>
+            </form>
+          </div>
+        </section>
+        <section class="services">
+          <h2 class="services__title">Kalite ve Süreç Yönetimi</h2>
+          <p class="services__text">
             Müşterilerimizin yüksek kalite seviyelerini koruyabilmeleri için
             farklı sektörlerde tecrübe kazanmış uzman kadrolarımızla Proje
             Yönetimi, İş Analizi ve Test Yönetimi hizmetleri sunmaktayız.
           </p>
-          <form name="subscription" class="promo__form">
-            <fieldset class="promo__fieldset">
-              <input
-                type="email"
-                name="email"
-                placeholder="Mail bültenimize kayıt ol"
-                class="promo__input"
-              />
-              <button
-                type="submit"
-                class="promo__button"
-                name="subscribe-button"
-              >
-                Kayıt Ol
-              </button>
-            </fieldset>
-          </form>
-        </div>
-      </section>
-      <section class="services">
-        <h2 class="services__title">Kalite ve Süreç Yönetimi</h2>
-        <p class="services__text">
-          Müşterilerimizin yüksek kalite seviyelerini koruyabilmeleri için
-          farklı sektörlerde tecrübe kazanmış uzman kadrolarımızla Proje
-          Yönetimi, İş Analizi ve Test Yönetimi hizmetleri sunmaktayız.
-        </p>
-        <ul class="services__list">
-          <li class="services__list-item">
-            <svg class="icon">
-              <use xlink:href="#file-icon"></use>
-            </svg>
-            <h3 class="services__subtitle">Döküman Analizi</h3>
-            <p class="servises__subtext">
-              Ante vulputate ut at accumsan et. Feugiat at tempus, est senectus
-              amet, elementum.
-            </p>
-          </li>
-          <li class="services__list-item">
-            <svg class="icon">
-              <use xlink:href="#star-icon"></use>
-            </svg>
-            <h3 class="services__subtitle">Kabul ve Değerlendirme</h3>
-            <p class="servises__subtext">
-              Ante vulputate ut at accumsan et. Feugiat at tempus, est senectus
-              amet, elementum.
-            </p>
-          </li>
-          <li class="services__list-item">
-            <svg class="icon">
-              <use xlink:href="#crown-icon"></use>
-            </svg>
-            <h3 class="services__subtitle">İş Kuralları Analizi</h3>
-            <p class="servises__subtext">
-              Ante vulputate ut at accumsan et. Feugiat at tempus, est senectus
-              amet, elementum.
-            </p>
-          </li>
-          <li class="services__list-item">
-            <svg class="icon">
-              <use xlink:href="#chartbar-icon"></use>
-            </svg>
-            <h3 class="services__subtitle">Akış Diyagramları</h3>
-            <p class="servises__subtext">
-              Ante vulputate ut at accumsan et. Feugiat at tempus, est senectus
-              amet, elementum.
-            </p>
-          </li>
-          <li class="services__list-item">
-            <svg class="icon">
-              <use xlink:href="#chartpie-icon"></use>
-            </svg>
-            <h3 class="services__subtitle">Paydaş Analizi</h3>
-            <p class="servises__subtext">
-              Ante vulputate ut at accumsan et. Feugiat at tempus, est senectus
-              amet, elementum.
-            </p>
-          </li>
-          <li class="services__list-item">
-            <svg class="icon">
-              <use xlink:href="#figma-icon"></use>
-            </svg>
-            <h3 class="services__subtitle">Prototipleme</h3>
-            <p class="servises__subtext">
-              Ante vulputate ut at accumsan et. Feugiat at tempus, est senectus
-              amet, elementum.
-            </p>
-          </li>
-        </ul>
-      </section>
-      <section class="test">
-        <h2 class="test__title">Test Yönetimiyle Neler Sağlıyoruz?</h2>
-        <h3 class="test__subtitle">IoT Destekli Çözümler</h3>
-        <ul class="test__list">
-          <li class="test__list-item">Yazılım Kalitesini Arttırıyoruz</li>
-          <li class="test__list-item">Olası Hataları Önceden Belirliyoruz</li>
-          <li class="test__list-item">Oluşabilecek Riskleri Önlüyoruz</li>
-          <li class="test__list-item">
-            Zaman ve Maliyetten Tasarruf Sağlıyoruz
-          </li>
-        </ul>
-      </section>
-      <section class="information">
-        <article class="information__article">
-          <h2 class="information__title">Kalite ve Süreç Yönetimi</h2>
-          <img
-            src="<%=require('../src/images/photo-1.jpg')%>"
-            alt="Photo 1"
-            class="information__image"
-          />
+          <ul class="services__list">
+            <li class="services__list-item">
+              <svg class="icon">
+                <use xlink:href="#file-icon"></use>
+              </svg>
+              <h3 class="services__subtitle">Döküman Analizi</h3>
+              <p class="servises__subtext">
+                Ante vulputate ut at accumsan et. Feugiat at tempus, est
+                senectus amet, elementum.
+              </p>
+            </li>
+            <li class="services__list-item">
+              <svg class="icon">
+                <use xlink:href="#star-icon"></use>
+              </svg>
+              <h3 class="services__subtitle">Kabul ve Değerlendirme</h3>
+              <p class="servises__subtext">
+                Ante vulputate ut at accumsan et. Feugiat at tempus, est
+                senectus amet, elementum.
+              </p>
+            </li>
+            <li class="services__list-item">
+              <svg class="icon">
+                <use xlink:href="#crown-icon"></use>
+              </svg>
+              <h3 class="services__subtitle">İş Kuralları Analizi</h3>
+              <p class="servises__subtext">
+                Ante vulputate ut at accumsan et. Feugiat at tempus, est
+                senectus amet, elementum.
+              </p>
+            </li>
+            <li class="services__list-item">
+              <svg class="icon">
+                <use xlink:href="#chartbar-icon"></use>
+              </svg>
+              <h3 class="services__subtitle">Akış Diyagramları</h3>
+              <p class="servises__subtext">
+                Ante vulputate ut at accumsan et. Feugiat at tempus, est
+                senectus amet, elementum.
+              </p>
+            </li>
+            <li class="services__list-item">
+              <svg class="icon">
+                <use xlink:href="#chartpie-icon"></use>
+              </svg>
+              <h3 class="services__subtitle">Paydaş Analizi</h3>
+              <p class="servises__subtext">
+                Ante vulputate ut at accumsan et. Feugiat at tempus, est
+                senectus amet, elementum.
+              </p>
+            </li>
+            <li class="services__list-item">
+              <svg class="icon">
+                <use xlink:href="#figma-icon"></use>
+              </svg>
+              <h3 class="services__subtitle">Prototipleme</h3>
+              <p class="servises__subtext">
+                Ante vulputate ut at accumsan et. Feugiat at tempus, est
+                senectus amet, elementum.
+              </p>
+            </li>
+          </ul>
+        </section>
+        <section class="test">
+          <h2 class="test__title">Test Yönetimiyle Neler Sağlıyoruz?</h2>
+          <h3 class="test__subtitle">IoT Destekli Çözümler</h3>
+          <ul class="test__list">
+            <li class="test__list-item">Yazılım Kalitesini Arttırıyoruz</li>
+            <li class="test__list-item">Olası Hataları Önceden Belirliyoruz</li>
+            <li class="test__list-item">Oluşabilecek Riskleri Önlüyoruz</li>
+            <li class="test__list-item">
+              Zaman ve Maliyetten Tasarruf Sağlıyoruz
+            </li>
+          </ul>
+        </section>
+        <section class="information">
+          <article class="information__article">
+            <h2 class="information__title">Kalite ve Süreç Yönetimi</h2>
+            <img
+              src="<%=require('../src/images/photo-1.jpg')%>"
+              alt="Photo 1"
+              class="information__image"
+            />
 
-          <p class="information__text">
-            Deneyimli kadromuz; birçok farklı sektörden deneyimli, PMP®
-            sertifikasına sahip, uzman proje yöneticilerinden oluşmaktadır.
-            Projelerinizin yönetimine destek olmak, zayıf olduğunu düşündüğünüz
-            alanları güçlendirmek, uluslararası geçerliliği olan PMI®
-            metodolojisini şirketinizde uygulamak ve geliştirmek için
-            yanınızdayız.
+            <p class="information__text">
+              Deneyimli kadromuz; birçok farklı sektörden deneyimli, PMP®
+              sertifikasına sahip, uzman proje yöneticilerinden oluşmaktadır.
+              Projelerinizin yönetimine destek olmak, zayıf olduğunu
+              düşündüğünüz alanları güçlendirmek, uluslararası geçerliliği olan
+              PMI® metodolojisini şirketinizde uygulamak ve geliştirmek için
+              yanınızdayız.
+            </p>
+            <button
+              type="submit"
+              class="information__button"
+              name="info-button"
+            >
+              Keşfet
+            </button>
+          </article>
+          <article class="information__article">
+            <h2 class="information__title">Kalite ve Süreç Yönetimi</h2>
+            <img
+              src="<%=require('../src/images/photo-2.jpg')%>"
+              alt="Photo 2"
+              class="information__image"
+            />
+            <p class="information__text">
+              Deneyimli kadromuz; birçok farklı sektörden deneyimli, PMP®
+              sertifikasına sahip, uzman proje yöneticilerinden oluşmaktadır.
+              Projelerinizin yönetimine destek olmak, zayıf olduğunu
+              düşündüğünüz alanları güçlendirmek, uluslararası geçerliliği olan
+              PMI® metodolojisini şirketinizde uygulamak ve geliştirmek için
+              yanınızdayız.
+            </p>
+            <button
+              type="submit"
+              class="information__button"
+              name="info-button"
+            >
+              Keşfet
+            </button>
+          </article>
+        </section>
+        <section class="clients">
+          <h2 class="clients__title">Referanslarımız</h2>
+          <p class="clients__text">
+            Bize güvenen ve beraber çalıştığımız iş ortaklarımız
           </p>
-          <button type="submit" class="information__button" name="info-button">
+          <ul class="clients__list">
+            <li class="clients__list-item">
+              <img
+                src="<%=require('../src/images/clients-1.png')%>"
+                alt="Clients 1"
+                class="clients__logo"
+              />
+            </li>
+            <li class="clients__list-item">
+              <img
+                src="<%=require('../src/images/clients-2.png')%>"
+                alt="Clients 2"
+                class="clients__logo"
+              />
+            </li>
+            <li class="clients__list-item">
+              <img
+                src="<%=require('../src/images/clients-3.png')%>"
+                alt="Clients 3"
+                class="clients__logo"
+              />
+            </li>
+            <li class="clients__list-item">
+              <img
+                src="<%=require('../src/images/clients-4.png')%>"
+                alt="Clients 4"
+                class="clients__logo"
+              />
+            </li>
+            <li class="clients__list-item">
+              <img
+                src="<%=require('../src/images/clients-5.png')%>"
+                alt="Clients 5"
+                class="clients__logo"
+              />
+            </li>
+            <li class="clients__list-item">
+              <img
+                src="<%=require('../src/images/clients-6.png')%>"
+                alt="Clients 6"
+                class="clients__logo"
+              />
+            </li>
+            <li class="clients__list-item">
+              <img
+                src="<%=require('../src/images/clients-7.png')%>"
+                alt="Clients 7"
+                class="clients__logo"
+              />
+            </li>
+            <li class="clients__list-item">
+              <img
+                src="<%=require('../src/images/clients-8.png')%>"
+                alt="Clients 8"
+                class="clients__logo"
+              />
+            </li>
+            <li class="clients__list-item">
+              <img
+                src="<%=require('../src/images/clients-9.png')%>"
+                alt="Clients 9"
+                class="clients__logo"
+              />
+            </li>
+          </ul>
+        </section>
+        <section class="contact-us">
+          <svg class="icon">
+            <use xlink:href="#contact-icon"></use>
+          </svg>
+          <h2 class="contact-us__title">Bize Ulaşın</h2>
+          <p class="contact-us_text">
+            Çözüm, hizmet ve ürünlerimiz hakkında detaylı bilgi için bizimle
+            irtibata geçin.
+          </p>
+          <button
+            type="submit"
+            class="contact-us__button"
+            name="contact-us-button"
+          >
             Keşfet
           </button>
-        </article>
-        <article class="information__article">
-          <h2 class="information__title">Kalite ve Süreç Yönetimi</h2>
-          <img
-            src="<%=require('../src/images/photo-2.jpg')%>"
-            alt="Photo 2"
-            class="information__image"
-          />
-          <p class="information__text">
-            Deneyimli kadromuz; birçok farklı sektörden deneyimli, PMP®
-            sertifikasına sahip, uzman proje yöneticilerinden oluşmaktadır.
-            Projelerinizin yönetimine destek olmak, zayıf olduğunu düşündüğünüz
-            alanları güçlendirmek, uluslararası geçerliliği olan PMI®
-            metodolojisini şirketinizde uygulamak ve geliştirmek için
-            yanınızdayız.
-          </p>
-          <button type="submit" class="information__button" name="info-button">
-            Keşfet
-          </button>
-        </article>
-      </section>
-      <section class="clients">
-        <h2 class="clients__title">Referanslarımız</h2>
-        <p class="clients__text">
-          Bize güvenen ve beraber çalıştığımız iş ortaklarımız
-        </p>
-        <ul class="clients__list">
-          <li class="clients__list-item">
-            <img
-              src="<%=require('../src/images/clients-1.png')%>"
-              alt="Clients 1"
-              class="clients__logo"
-            />
+        </section>
+      </main>
+      <footer class="footer">
+        <nav class="footer__navigation">
+          <ul class="footer__menu">
+            <li class="footer__menu-item">
+              <a class="footer__link">Çözüm ve Hizmetlerz</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__link">Yazılım Geliştirme</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__link">Outsourcing</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__link">Kalite ve Süreç Yönetimi</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__link">Danışmanlık</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__link">IoT Destekli Çözümler</a>
+            </li>
+          </ul>
+          <ul class="footer__menu">
+            <li class="footer__menu-item">
+              <a class="footer__link">Ürünler</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__link">Eğitim Yönetim Sistemi</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__link">İnsan Sermayesi Yönetim Sistemi</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__link">Müşteri İlişkileri Yönetim Sistemi</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__link">İçerik Yönetim Sistemi</a>
+            </li>
+          </ul>
+          <ul class="footer__menu">
+            <li class="footer__menu-item">
+              <a class="footer__link">Kurumsal</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__link">Hakkımızda</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__link">Belge ve Yetkinlikler</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__link">İş Ortakları</a>
+            </li>
+          </ul>
+          <ul class="footer__menu">
+            <li class="footer__menu-item">
+              <a class="footer__link">İletişim</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__link">Bilgi İstek Formu</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__link">Uzman Talep Formu</a>
+            </li>
+          </ul>
+        </nav>
+        <p class="footer__copyright">© Copyright 2010-2021 - Can Çevik</p>
+        <ul class="footer__social-links">
+          <li class="footer__social-links-item">
+            <a class="footer__link">
+              <svg class="icon">
+                <use xlink:href="#medium-icon"></use>
+              </svg>
+            </a>
           </li>
-          <li class="clients__list-item">
-            <img
-              src="<%=require('../src/images/clients-2.png')%>"
-              alt="Clients 2"
-              class="clients__logo"
-            />
+          <li class="footer__social-links-item">
+            <a class="footer__link">
+              <svg class="icon">
+                <use xlink:href="#linkedin-icon"></use>
+              </svg>
+            </a>
           </li>
-          <li class="clients__list-item">
-            <img
-              src="<%=require('../src/images/clients-3.png')%>"
-              alt="Clients 3"
-              class="clients__logo"
-            />
+          <li class="footer__social-links-item">
+            <a class="footer__link">
+              <svg class="icon">
+                <use xlink:href="#twitter-icon"></use>
+              </svg>
+            </a>
           </li>
-          <li class="clients__list-item">
-            <img
-              src="<%=require('../src/images/clients-4.png')%>"
-              alt="Clients 4"
-              class="clients__logo"
-            />
+          <li class="footer__social-links-item">
+            <a class="footer__link">
+              <svg class="icon">
+                <use xlink:href="#instagram-icon"></use>
+              </svg>
+            </a>
           </li>
-          <li class="clients__list-item">
-            <img
-              src="<%=require('../src/images/clients-5.png')%>"
-              alt="Clients 5"
-              class="clients__logo"
-            />
-          </li>
-          <li class="clients__list-item">
-            <img
-              src="<%=require('../src/images/clients-6.png')%>"
-              alt="Clients 6"
-              class="clients__logo"
-            />
-          </li>
-          <li class="clients__list-item">
-            <img
-              src="<%=require('../src/images/clients-7.png')%>"
-              alt="Clients 7"
-              class="clients__logo"
-            />
-          </li>
-          <li class="clients__list-item">
-            <img
-              src="<%=require('../src/images/clients-8.png')%>"
-              alt="Clients 8"
-              class="clients__logo"
-            />
-          </li>
-          <li class="clients__list-item">
-            <img
-              src="<%=require('../src/images/clients-9.png')%>"
-              alt="Clients 9"
-              class="clients__logo"
-            />
-          </li>
-        </ul>
-      </section>
-      <section class="contact-us">
-        <svg class="icon">
-          <use xlink:href="#contact-icon"></use>
-        </svg>
-        <h2 class="contact-us__title">Bize Ulaşın</h2>
-        <p class="contact-us_text">
-          Çözüm, hizmet ve ürünlerimiz hakkında detaylı bilgi için bizimle
-          irtibata geçin.
-        </p>
-        <button
-          type="submit"
-          class="contact-us__button"
-          name="contact-us-button"
-        >
-          Keşfet
-        </button>
-      </section>
-    </main>
-    <footer class="footer">
-      <nav class="footer__navigation">
-        <ul class="footer__menu">
-          <li class="footer__menu-item">
-            <a class="footer__link">Çözüm ve Hizmetlerz</a>
-          </li>
-          <li class="footer__menu-item">
-            <a class="footer__link">Yazılım Geliştirme</a>
-          </li>
-          <li class="footer__menu-item">
-            <a class="footer__link">Outsourcing</a>
-          </li>
-          <li class="footer__menu-item">
-            <a class="footer__link">Kalite ve Süreç Yönetimi</a>
-          </li>
-          <li class="footer__menu-item">
-            <a class="footer__link">Danışmanlık</a>
-          </li>
-          <li class="footer__menu-item">
-            <a class="footer__link">IoT Destekli Çözümler</a>
+          <li class="footer__social-links-item">
+            <a class="footer__link">
+              <svg class="icon">
+                <use xlink:href="#facebook-icon"></use>
+              </svg>
+            </a>
           </li>
         </ul>
-        <ul class="footer__menu">
-          <li class="footer__menu-item"><a class="footer__link">Ürünler</a></li>
-          <li class="footer__menu-item">
-            <a class="footer__link">Eğitim Yönetim Sistemi</a>
-          </li>
-          <li class="footer__menu-item">
-            <a class="footer__link">İnsan Sermayesi Yönetim Sistemi</a>
-          </li>
-          <li class="footer__menu-item">
-            <a class="footer__link">Müşteri İlişkileri Yönetim Sistemi</a>
-          </li>
-          <li class="footer__menu-item">
-            <a class="footer__link">İçerik Yönetim Sistemi</a>
-          </li>
-        </ul>
-        <ul class="footer__menu">
-          <li class="footer__menu-item">
-            <a class="footer__link">Kurumsal</a>
-          </li>
-          <li class="footer__menu-item">
-            <a class="footer__link">Hakkımızda</a>
-          </li>
-          <li class="footer__menu-item">
-            <a class="footer__link">Belge ve Yetkinlikler</a>
-          </li>
-          <li class="footer__menu-item">
-            <a class="footer__link">İş Ortakları</a>
-          </li>
-        </ul>
-        <ul class="footer__menu">
-          <li class="footer__menu-item">
-            <a class="footer__link">İletişim</a>
-          </li>
-          <li class="footer__menu-item">
-            <a class="footer__link">Bilgi İstek Formu</a>
-          </li>
-          <li class="footer__menu-item">
-            <a class="footer__link">Uzman Talep Formu</a>
-          </li>
-        </ul>
-      </nav>
-      <p class="footer__copyright">© Copyright 2010-2021 - Can Çevik</p>
-      <ul class="footer__social-links">
-        <li class="footer__social-links-item">
-          <a class="footer__link">
-            <svg class="icon">
-              <use xlink:href="#medium-icon"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="footer__social-links-item">
-          <a class="footer__link">
-            <svg class="icon">
-              <use xlink:href="#linkedin-icon"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="footer__social-links-item">
-          <a class="footer__link">
-            <svg class="icon">
-              <use xlink:href="#twitter-icon"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="footer__social-links-item">
-          <a class="footer__link">
-            <svg class="icon">
-              <use xlink:href="#instagram-icon"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="footer__social-links-item">
-          <a class="footer__link">
-            <svg class="icon">
-              <use xlink:href="#facebook-icon"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>
