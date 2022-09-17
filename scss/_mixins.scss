@@ -1,3 +1,11 @@
+@import './variables';
+
+@mixin basicFont() {
+  font-family: 'Manrope', Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
 @mixin flexible($width) {
   display: flex;
   width: $width;
@@ -19,4 +27,21 @@
   white-space: nowrap;
   text-decoration: none;
   transition: text-decoration 1s ease;
+}
+
+@mixin button($width, $bRadius) {
+  @include flexible($width);
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0;
+  border: none;
+  background-color: $color-red;
+  color: $color-white;
+  border-radius: $bRadius;
+}
+
+@mixin centeredTitle {
+  font-weight: 800;
+  text-align: center;
 }

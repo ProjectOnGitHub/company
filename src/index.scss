@@ -1,5 +1,31 @@
-* {
-  color: black;
+@import '../scss/mixins';
+@import '../scss/variables';
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap');
+
+.root {
+  @include gridable(100%);
+  box-sizing: border-box;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+  @include basicFont();
+}
+
+.header,
+.main,
+.footer {
+  @include gridable(100%);
+  justify-content: space-between;
+  box-sizing: border-box;
+  max-width: $max-width;
+  padding: 0 20px;
+}
+
+.header {
+  &__button {
+    @include button(91px, 5px);
+    height: 40px;
+  }
 }
 
 .icon {
