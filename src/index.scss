@@ -10,6 +10,9 @@
   align-items: center;
   @include basicFont();
   background: url(../src/images/bg-header.png) center top no-repeat;
+  @media screen and (max-width: $tablet) {
+    background-image: url(../src/images/bg-header-mid.png);
+  }
 }
 
 .header,
@@ -145,10 +148,20 @@
   padding-left: 122px;
   padding-top: 90px;
   padding-bottom: 148px;
+  @media screen and (max-width: $desktop) {
+    padding-left: 84px;
+  }
+  @media screen and (max-width: $tablet) {
+    padding-top: 50px;
+    padding-bottom: 123px;
+  }
   &__container {
     @include gridable(100%);
     grid-template-columns: 1fr;
     max-width: 665px;
+    @media screen and (max-width: $tablet) {
+      max-width: 600px;
+    }
   }
   &__title {
     @include title();
@@ -156,12 +169,21 @@
     font-size: 64px;
     line-height: 1.28;
     margin-bottom: 10px;
+    @media screen and (max-width: $tablet) {
+      font-size: 56px;
+      line-height: 1.31;
+    }
   }
   &__text {
     @include text();
     font-size: 20px;
     line-height: 1.8;
     margin-bottom: 50px;
+    @media screen and (max-width: $tablet) {
+      font-size: 16px;
+      line-height: 1.75;
+      max-width: 545px;
+    }
   }
   &__form {
     width: 100%;
@@ -175,6 +197,9 @@
     padding: 0;
     max-width: 502px;
     justify-items: end;
+    @media screen and (max-width: $tablet) {
+      max-width: 422px;
+    }
   }
   &__input {
     box-sizing: border-box;
@@ -184,7 +209,6 @@
     border: none;
     border-radius: 8px;
     height: 73px;
-    max-width: 502px;
     width: 100%;
   }
   &__button {
