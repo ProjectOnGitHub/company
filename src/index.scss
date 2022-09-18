@@ -13,6 +13,9 @@
   @media screen and (max-width: $tablet) {
     background-image: url(../src/images/bg-header-mid.png);
   }
+  @media screen and (max-width: $smartphone) {
+    background-position: right -150px top -30px;
+  }
 }
 
 .header,
@@ -21,7 +24,6 @@
   @include gridable(100%);
   box-sizing: border-box;
   max-width: $max-width;
-  padding: 0 20px;
   grid-template-columns: 1fr;
 }
 
@@ -43,6 +45,14 @@
     padding-right: 40px;
     padding-left: 40px;
   }
+  @media screen and (max-width: $tablet) {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  @media screen and (max-width: $smartphone) {
+    background-color: rgba($color-light, 0.5);
+  }
+
   &__navigation {
     @include gridable(100%);
     height: $header-height-desk;
@@ -54,6 +64,9 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 1.43;
+    @media screen and (max-width: $tablet-small) {
+      height: $header-height-mob;
+    }
   }
   &__menu {
     @include unmarkedList(0, 0);
@@ -155,12 +168,26 @@
     padding-top: 50px;
     padding-bottom: 123px;
   }
+
+  @media screen and (max-width: $tablet-small) {
+    padding-left: 40px;
+    padding-right: 40px;
+    justify-items: center;
+  }
+  @media screen and (max-width: $smartphone) {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgba($color-light, 0.5);
+  }
   &__container {
     @include gridable(100%);
     grid-template-columns: 1fr;
     max-width: 665px;
     @media screen and (max-width: $tablet) {
       max-width: 600px;
+    }
+    @media screen and (max-width: $tablet-small) {
+      max-width: 450px;
     }
   }
   &__title {
@@ -173,6 +200,11 @@
       font-size: 56px;
       line-height: 1.31;
     }
+    @media screen and (max-width: $tablet-small) {
+      font-size: 42px;
+      line-height: 1.36;
+      text-align: center;
+    }
   }
   &__text {
     @include text();
@@ -183,6 +215,9 @@
       font-size: 16px;
       line-height: 1.75;
       max-width: 545px;
+    }
+    @media screen and (max-width: $tablet-small) {
+      font-size: 12px;
     }
   }
   &__form {
@@ -197,9 +232,6 @@
     padding: 0;
     max-width: 502px;
     justify-items: end;
-    @media screen and (max-width: $tablet) {
-      max-width: 422px;
-    }
   }
   &__input {
     box-sizing: border-box;
@@ -210,12 +242,26 @@
     border-radius: 8px;
     height: 73px;
     width: 100%;
+    @media screen and (max-width: $tablet-small) {
+      height: 60px;
+      font-size: 14px;
+      padding-left: 20px;
+    }
   }
   &__button {
     @include button(136px, 61px, 8px);
     margin-right: 6px;
     grid-area: area;
+    @media screen and (max-width: $tablet-small) {
+      height: 50px;
+      margin-right: 5px;
+      font-size: 14px;
+    }
   }
+}
+
+.services {
+  background-color: $color-white;
 }
 
 .cross {
