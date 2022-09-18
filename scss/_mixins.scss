@@ -31,6 +31,7 @@
 
 @mixin button($width, $height, $b-radius) {
   @include flexible($width);
+  cursor: pointer;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
