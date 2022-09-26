@@ -119,7 +119,6 @@
         transition: 0.5s;
         border: none;
         border-radius: 0;
-        //  background: no-repeat url(../src/svg/menu-icon.svg);
         background-size: contain;
 
         justify-self: left;
@@ -157,6 +156,11 @@
     }
   }
 }
+
+.main {
+  justify-items: center;
+}
+
 .promo {
   padding-left: 122px;
   padding-top: 90px;
@@ -261,7 +265,61 @@
 }
 
 .services {
+  justify-items: center;
   background-color: $color-white;
+  &__container {
+    @include gridable(100%);
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 120px 0 140px;
+    max-width: 1173px;
+  }
+  &__title {
+    @include title();
+    font-size: 36px;
+    line-height: 1.36;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    max-width: 994px;
+    text-align: center;
+    width: 100%;
+    @include text();
+    font-size: 24px;
+    line-height: 1.65;
+    margin-bottom: 90px;
+  }
+
+  &__list {
+    @include gridable(100%);
+    grid-template-columns: repeat(3, 298px);
+    justify-content: space-between;
+    @include unmarkedList(0, 0);
+    gap: 88px 0px;
+    &-item {
+      @include flexible(100%);
+      max-width: 298px;
+      flex-flow: column wrap;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+  &__icon {
+    width: 76px;
+    height: 76px;
+  }
+  &__subtitle {
+    @include title();
+    font-size: 24px;
+    line-height: 1.36;
+  }
+  &__subtext {
+    @include text();
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.55;
+  }
 }
 
 .cross {
