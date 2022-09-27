@@ -265,20 +265,40 @@
 }
 
 .services {
+  padding-left: 20px;
+  padding-right: 20px;
   justify-items: center;
   background-color: $color-white;
+
   &__container {
     @include gridable(100%);
     grid-template-columns: 1fr;
     justify-items: center;
     padding: 120px 0 140px;
-    max-width: 1173px;
+    max-width: 1174px;
+    @media screen and (max-width: $tablet) {
+      font-size: 12px;
+      max-width: 852px;
+    }
+    @media screen and (max-width: $tablet-small) {
+      padding: 90px 0 115px;
+    }
+    @media screen and (max-width: $smartphone) {
+      padding: 60px 0 90px;
+    }
   }
   &__title {
     @include title();
     font-size: 36px;
     line-height: 1.36;
     margin-bottom: 30px;
+    @media screen and (max-width: $tablet-small) {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+    @media screen and (max-width: $smartphone) {
+      font-size: 24px;
+    }
   }
 
   &__text {
@@ -289,6 +309,13 @@
     font-size: 24px;
     line-height: 1.65;
     margin-bottom: 90px;
+    @media screen and (max-width: $tablet-small) {
+      font-size: 18px;
+      margin-bottom: 60px;
+    }
+    @media screen and (max-width: $smartphone) {
+      font-size: 14px;
+    }
   }
 
   &__list {
@@ -296,7 +323,19 @@
     grid-template-columns: repeat(3, 298px);
     justify-content: space-between;
     @include unmarkedList(0, 0);
-    gap: 88px 0px;
+    row-gap: 88px;
+    @media screen and (max-width: $tablet) {
+      grid-template-columns: repeat(2, 298px);
+      max-width: 764px;
+    }
+    @media screen and (max-width: $tablet-small) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      row-gap: 70px;
+    }
+    @media screen and (max-width: $smartphone) {
+      row-gap: 50px;
+    }
     &-item {
       @include flexible(100%);
       max-width: 298px;
@@ -313,12 +352,18 @@
     @include title();
     font-size: 24px;
     line-height: 1.36;
+    @media screen and (max-width: $tablet-small) {
+      font-size: 18px;
+    }
   }
   &__subtext {
     @include text();
     font-size: 18px;
     text-align: center;
     line-height: 1.55;
+    @media screen and (max-width: $tablet-small) {
+      font-size: 14px;
+    }
   }
 }
 
