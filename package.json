@@ -31,10 +31,17 @@
     "webpack-dev-server": "^4.11.0"
   },
   "dependencies": {
-    "autoprefixer": "^10.4.8",
+    "autoprefixer": "^10.4.12",
     "core-js": "^3.25.1",
     "cssnano": "^5.1.13",
     "npm-check-updates": "^16.1.2",
+    "postcss": "^8.4.16",
+    "postcss-cli": "^10.0.0",
     "svg-transform-loader": "^2.0.13"
-  }
+  },
+  "browserslist": [
+    "last 5 version",
+    "> 1%",
+    "not dead"
+  ]
 }
