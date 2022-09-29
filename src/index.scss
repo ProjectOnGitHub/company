@@ -367,6 +367,46 @@
   }
 }
 
+.test {
+  height: 100%;
+  background-color: $color-red;
+  align-items: center;
+  justify-items: center;
+  color: $color-white;
+  padding: 70px 20px;
+  &__title {
+    @include title();
+    font-size: 48px;
+    line-height: 1.33;
+    padding-bottom: 10px;
+  }
+  &__text {
+    @include text();
+    font-size: 18px;
+    line-height: 1.78;
+    padding-bottom: 64px;
+  }
+  &__list {
+    @include unmarkedList(0, 0);
+    @include flexible(100%);
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    line-height: 1.72;
+    font-weight: 700;
+    &-item {
+      @include flexible(100%);
+      align-items: center;
+      justify-content: center;
+      &-separate {
+        content: url(./images/circle-right.png);
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+}
+
 .cross {
   @include gridable(100%);
   align-content: space-between;
