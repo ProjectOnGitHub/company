@@ -460,6 +460,70 @@
   }
 }
 
+.information {
+  padding: 160px 20px;
+  justify-items: center;
+  gap: 120px;
+  &__article {
+    align-content: space-between;
+    justify-content: space-between;
+    column-gap: 145px;
+    max-width: 1197px;
+    @include gridable(100%);
+    grid-template-areas:
+      'title img'
+      'txt img'
+      'button img';
+    @media screen and (max-width: $desktop) {
+      column-gap: 100px;
+    }
+    @media screen and (max-width: $tablet) {
+    }
+    &_reflection {
+      grid-template-areas:
+        'img title '
+        'img txt'
+        'img button';
+    }
+  }
+  &__title {
+    color: $color-dark;
+    font-weight: 700;
+    margin: 0;
+    font-size: 64px;
+    line-height: 1.19;
+    grid-area: title;
+    @media screen and (max-width: $desktop) {
+      font-size: 58px;
+    }
+  }
+  &__text {
+    @include text();
+    font-size: 16px;
+    line-height: 2;
+    color: $color-gray;
+    grid-area: txt;
+    max-width: 523px;
+    @media screen and (max-width: $desktop) {
+      font-size: 14px;
+    }
+  }
+  &__image {
+    max-width: 504px;
+    height: auto;
+    grid-area: img;
+    @media screen and (max-width: $desktop) {
+      max-width: 424px;
+    }
+  }
+  &__button {
+    @include button(160px, 48px, 8px);
+    grid-area: button;
+    align-self: end;
+    font-size: 14px;
+  }
+}
+
 .cross {
   @include gridable(100%);
   align-content: space-between;
