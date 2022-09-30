@@ -374,6 +374,13 @@
   justify-items: center;
   color: $color-white;
   padding: 70px 20px;
+  position: relative;
+  overflow: hidden;
+  &:before {
+    content: url(./images/bg-test.png);
+    opacity: 0.2;
+    position: absolute;
+  }
   @media screen and (max-width: $tablet) {
     padding-top: 60px;
     padding-bottom: 60px;
