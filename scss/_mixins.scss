@@ -44,11 +44,40 @@
 }
 
 @mixin title {
-  margin: 0;
   font-weight: 800;
+  margin: 0;
+}
+
+@mixin title_48px {
+  font-size: 48px;
+  line-height: 1.33;
+  font-weight: 800;
+  text-align: center;
+  margin: 0;
+  @media screen and (max-width: $tablet) {
+    font-size: 44px;
+  }
+  @media screen and (max-width: $tablet-small) {
+    font-size: 40px;
+  }
+  @media screen and (max-width: $smartphone) {
+    font-size: 36px;
+  }
 }
 
 @mixin text {
   margin: 0;
   font-weight: 400;
+}
+
+@mixin text_18px {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.78;
+  @media screen and (max-width: $tablet) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: $tablet-small) {
+    font-size: 14px;
+  }
 }

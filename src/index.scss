@@ -390,35 +390,18 @@
     padding-bottom: 50px;
   }
   &__title {
-    @include title();
-    font-size: 48px;
-    line-height: 1.33;
-    padding-bottom: 10px;
-    text-align: center;
-    @media screen and (max-width: $tablet) {
-      font-size: 44px;
-    }
-    @media screen and (max-width: $tablet-small) {
-      font-size: 40px;
-    }
-    @media screen and (max-width: $smartphone) {
-      font-size: 36px;
-    }
+    @include title_48px();
+    margin-bottom: 10px;
   }
   &__text {
-    @include text();
-    font-size: 18px;
-    line-height: 1.78;
-    padding-bottom: 64px;
+    @include text_18px();
+    font-weight: 500px;
+    margin-bottom: 64px;
     @media screen and (max-width: $tablet) {
-      font-size: 16px;
-      padding-bottom: 50px;
-    }
-    @media screen and (max-width: $tablet-small) {
-      font-size: 14px;
+      margin-bottom: 50px;
     }
     @media screen and (max-width: $smartphone) {
-      padding-bottom: 40px;
+      margin-bottom: 40px;
     }
   }
   &__list {
@@ -426,15 +409,10 @@
     @include flexible(100%);
     justify-content: space-between;
     align-items: center;
-    font-size: 18px;
-    line-height: 1.72;
+    @include text_18px();
     font-weight: 700;
     max-width: 1088px;
-    @media screen and (max-width: $tablet) {
-      font-size: 16px;
-    }
     @media screen and (max-width: $tablet-small) {
-      font-size: 14px;
       flex-direction: column;
       text-align: center;
       gap: 40px;
@@ -570,15 +548,12 @@
   justify-items: center;
   padding: 60px 20px;
   &__title {
-    @include title();
-    font-size: 48px;
-    line-height: 1.33;
+    @include title_48px();
   }
   &__text {
-    @include text();
+    @include text_18px();
+    font-weight: 500;
     margin-bottom: 48px;
-    font-size: 18px;
-    line-height: 1.78;
   }
   &__list {
     @include gridable(100%);
