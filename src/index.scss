@@ -329,10 +329,13 @@
       max-width: 764px;
     }
     @media screen and (max-width: $tablet-small) {
-      grid-template-columns: 1fr;
       justify-items: center;
       row-gap: 70px;
     }
+    @media screen and (max-width: $smartphone) {
+      grid-template-columns: 1fr;
+    }
+
     @media screen and (max-width: $smartphone-small) {
       row-gap: 50px;
     }
