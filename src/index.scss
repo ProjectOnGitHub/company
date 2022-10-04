@@ -565,6 +565,10 @@
       grid-template-columns: repeat(3, 170px);
       grid-template-rows: repeat(3, 1fr);
     }
+    @media screen and (max-width: $smartphone) {
+      grid-template-columns: repeat(2, 170px);
+      grid-template-rows: repeat(4, 1fr);
+    }
 
     &-item {
       @include gridable(100%);
