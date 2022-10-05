@@ -633,6 +633,45 @@
   }
 }
 
+.contact-us {
+  justify-items: center;
+  padding: 160px 20px;
+  @media screen and (max-width: $tablet-small) {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+  @media screen and (max-width: $smartphone-small) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  &__icon {
+    width: 120px;
+    height: 120px;
+  }
+  &__title {
+    @include title_48px();
+  }
+  &__text {
+    @include text_18px();
+    font-weight: 500;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  &__button {
+    @include button(204px, 70px, 8px);
+    font-size: 24px;
+    @media screen and (max-width: $tablet-small) {
+      width: 180px;
+      height: 60px;
+    }
+    @media screen and (max-width: $smartphone-small) {
+      width: 124px;
+      height: 42px;
+      font-size: 16px;
+    }
+  }
+}
+
 .cross {
   @include gridable(100%);
   align-content: space-between;
