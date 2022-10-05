@@ -172,7 +172,6 @@
     padding-top: 50px;
     padding-bottom: 123px;
   }
-
   @media screen and (max-width: $tablet-small) {
     padding-left: 40px;
     padding-right: 40px;
@@ -181,6 +180,7 @@
   @media screen and (max-width: $smartphone-small) {
     padding-left: 20px;
     padding-right: 20px;
+    padding-bottom: 100px;
     background-color: rgba($color-light, 0.5);
   }
   &__container {
