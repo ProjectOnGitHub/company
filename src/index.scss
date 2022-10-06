@@ -129,6 +129,10 @@
     @include button(91px, 40px, 5px);
     height: 40px;
   }
+  &__link {
+    @include link();
+    color: $color-black;
+  }
 }
 
 .overlay {
@@ -731,11 +735,15 @@
     align-content: start;
     row-gap: 10px;
     &-item {
-      &:first-child {
+      &:first-child a {
         font-weight: 700;
         color: $color-white;
       }
     }
+  }
+  &__link {
+    @include link();
+    color: $color-light;
   }
   &__copyright {
     @include text();
