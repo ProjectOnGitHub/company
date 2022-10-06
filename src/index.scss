@@ -672,6 +672,91 @@
   }
 }
 
+.footer {
+  font-size: 16px;
+  background-color: $color-red;
+  padding: 80px 104px 70px;
+  color: $color-white;
+  grid-template-areas:
+    'nav nav'
+    'copyright social';
+  row-gap: 50px;
+  align-items: center;
+  @media screen and (max-width: $desktop) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  @media screen and (max-width: $tablet) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  @media screen and (max-width: $smartphone) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media screen and (max-width: $smartphone-small) {
+    grid-template-areas:
+      'nav'
+      'social'
+      'copyright';
+    padding-left: 20px;
+    padding-right: 20px;
+    row-gap: 30px;
+  }
+  &__navigation {
+    @include gridable(100%);
+    grid-area: nav;
+    grid-template-columns: repeat(4, max-content);
+    justify-content: space-between;
+    max-width: 1034px;
+    @media screen and (max-width: $tablet-small) {
+      grid-template-columns: repeat(2, max-content);
+      gap: 50px 100px;
+      justify-content: start;
+    }
+    @media screen and (max-width: $smartphone) {
+      column-gap: 50px;
+    }
+    @media screen and (max-width: $smartphone-small) {
+      grid-template-columns: 1fr;
+      margin-bottom: 30px;
+    }
+  }
+  &__menu {
+    color: $color-light;
+    @include unmarkedList(0, 0);
+    line-height: 2;
+    @include gridable(100%);
+    align-content: start;
+    row-gap: 10px;
+    &-item {
+      &:first-child {
+        font-weight: 700;
+        color: $color-white;
+      }
+    }
+  }
+  &__copyright {
+    @include text();
+    grid-area: copyright;
+  }
+  &__social-links {
+    grid-area: social;
+    @include unmarkedList(0, 0);
+    @include flexible(100%);
+    gap: 16px;
+  }
+  &__icon {
+    width: 32px;
+    height: 32px;
+  }
+  &__link {
+    @include flexible(100%);
+    align-items: center;
+  }
+}
+
 .cross {
   @include gridable(100%);
   align-content: space-between;
