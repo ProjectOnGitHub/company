@@ -3,13 +3,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap');
 
 .root {
-  @include gridable(100%);
-  box-sizing: border-box;
-  grid-template-columns: 1fr;
-  justify-items: center;
   align-items: center;
-  @include basicFont();
+
+  box-sizing: border-box;
+
   background: url(../src/images/bg-header.png) center top no-repeat;
+
+  grid-template-columns: 1fr;
+  @include gridable(100%);
+  @include basicFont();
+  justify-items: center;
   @media screen and (max-width: $tablet) {
     background-image: url(../src/images/bg-header-mid.png);
   }
@@ -21,10 +24,11 @@
 .header,
 .main,
 .footer {
-  @include gridable(100%);
   box-sizing: border-box;
   max-width: $max-width;
+
   grid-template-columns: 1fr;
+  @include gridable(100%);
 }
 
 .promo,
@@ -33,9 +37,10 @@
 .information,
 .clients,
 .contact-us {
-  @include gridable(100%);
   box-sizing: border-box;
+
   grid-template-columns: 1fr;
+  @include gridable(100%);
 }
 
 .header {
@@ -54,71 +59,86 @@
   }
 
   &__navigation {
-    @include gridable(100%);
-    height: $header-height-desk;
-    max-width: $max-width;
-    grid-template-columns: 1fr min-content;
-    justify-content: space-between;
     align-items: center;
-    gap: 40px;
-    font-weight: 700;
+    justify-content: space-between;
+
+    max-width: $max-width;
+    height: $header-height-desk;
+
     font-size: 14px;
+    font-weight: 700;
     line-height: 1.43;
+
+    gap: 40px;
+    grid-template-columns: 1fr min-content;
+    @include gridable(100%);
     @media screen and (max-width: $tablet-small) {
       height: $header-height-mob;
     }
   }
   &__menu {
-    @include unmarkedList(0, 0);
-    @include flexible(100%);
+    align-items: center;
     flex-flow: row nowrap;
     justify-content: flex-end;
-    align-items: center;
+
     gap: 40px;
+    @include unmarkedList(0, 0);
+    @include flexible(100%);
     @media screen and (max-width: $tablet-small) {
-      background-color: $color-white;
       position: fixed;
       z-index: 1;
       top: 0;
       left: -320px;
+
       visibility: hidden;
       align-content: center;
       align-items: center;
       flex-direction: column;
       justify-content: center;
+
       box-sizing: border-box;
       width: 100%;
       max-width: 320px;
       height: 100vh;
+
       transition: 0.5s;
+
       opacity: 0;
+      background-color: $color-white;
+
       font-size: 24px;
+
       gap: 20px;
       &_opened {
         left: 0;
+
         display: flex;
         visibility: visible;
+
         transition: 0.5s;
+
         opacity: 1;
       }
     }
     &-button {
       display: none;
       @media screen and (max-width: $tablet-small) {
-        background-color: transparent;
         z-index: 2;
-        padding: 0;
-        justify-content: center;
+
+        display: flex;
         align-content: center;
         align-items: center;
-        display: flex;
+        justify-content: center;
 
         width: 32px;
         height: 32px;
+        padding: 0;
 
         transition: 0.5s;
+
         border: none;
         border-radius: 0;
+        background-color: transparent;
         background-size: contain;
 
         justify-self: left;
@@ -126,37 +146,46 @@
     }
   }
   &__button {
-    @include button(91px, 40px, 5px);
     height: 40px;
+
+    @include button(91px, 40px, 5px);
   }
   &__link {
-    @include link();
     color: $color-black;
+
+    @include link();
   }
 }
 
 .overlay {
   display: none;
   @media screen and (max-width: $tablet-small) {
-    display: block;
     position: fixed;
     top: 0;
     left: -150%;
+
+    display: block;
     display: block;
     visibility: hidden;
+
     width: 100%;
     height: 100vh;
+
     -webkit-transition: 0.5s;
     transition: 0.5s;
+
     opacity: 0;
     background: #292929;
     &_active {
-      cursor: pointer;
       right: 0;
+
       visibility: visible;
-      opacity: 0.6;
+
+      cursor: pointer;
       -webkit-transition: 0.5s;
       transition: 0.5s;
+
+      opacity: 0.6;
     }
   }
 }
@@ -166,9 +195,9 @@
 }
 
 .promo {
-  padding-left: 122px;
   padding-top: 90px;
   padding-bottom: 148px;
+  padding-left: 122px;
   @media screen and (max-width: $desktop) {
     padding-left: 84px;
   }
@@ -177,20 +206,23 @@
     padding-bottom: 123px;
   }
   @media screen and (max-width: $tablet-small) {
-    padding-left: 40px;
     padding-right: 40px;
+    padding-left: 40px;
+
     justify-items: center;
   }
   @media screen and (max-width: $smartphone-small) {
-    padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 100px;
+    padding-left: 20px;
+
     background-color: rgba($color-light, 0.5);
   }
   &__container {
-    @include gridable(100%);
-    grid-template-columns: 1fr;
     max-width: 665px;
+
+    grid-template-columns: 1fr;
+    @include gridable(100%);
     @media screen and (max-width: $tablet) {
       max-width: 600px;
     }
@@ -199,30 +231,36 @@
     }
   }
   &__title {
-    @include title();
-    font-weight: 800;
-    font-size: 64px;
-    line-height: 1.28;
     margin-bottom: 10px;
+
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.28;
+
+    @include title();
     @media screen and (max-width: $tablet) {
       font-size: 56px;
       line-height: 1.31;
     }
     @media screen and (max-width: $tablet-small) {
+      text-align: center;
+
       font-size: 42px;
       line-height: 1.36;
-      text-align: center;
     }
   }
   &__text {
-    @include text();
+    margin-bottom: 50px;
+
     font-size: 20px;
     line-height: 1.8;
-    margin-bottom: 50px;
+
+    @include text();
     @media screen and (max-width: $tablet) {
+      max-width: 545px;
+
       font-size: 16px;
       line-height: 1.75;
-      max-width: 545px;
     }
     @media screen and (max-width: $tablet-small) {
       font-size: 12px;
@@ -232,57 +270,69 @@
     width: 100%;
   }
   &__fieldset {
-    @include gridable(100%);
-    grid-template-areas: 'area';
     align-items: center;
-    border: 0;
+
+    max-width: 502px;
     margin: 0;
     padding: 0;
-    max-width: 502px;
+
+    border: 0;
+
+    grid-template-areas: 'area';
+    @include gridable(100%);
     justify-items: end;
   }
   &__input {
     box-sizing: border-box;
-    grid-area: area;
+    width: 100%;
+    height: 73px;
     padding-left: 32px;
-    background-color: $color-white;
+
     border: none;
     border-radius: 8px;
-    height: 73px;
-    width: 100%;
+    background-color: $color-white;
+
+    grid-area: area;
     @media screen and (max-width: $tablet-small) {
       height: 60px;
-      font-size: 14px;
       padding-left: 20px;
+
+      font-size: 14px;
     }
   }
   &__button {
-    @include button(136px, 61px, 8px);
     margin-right: 6px;
+
     grid-area: area;
+    @include button(136px, 61px, 8px);
     @media screen and (max-width: $tablet-small) {
       height: 50px;
       margin-right: 5px;
+
       font-size: 14px;
     }
   }
 }
 
 .services {
-  padding-left: 20px;
   padding-right: 20px;
-  justify-items: center;
+  padding-left: 20px;
+
   background-color: $color-white;
 
+  justify-items: center;
+
   &__container {
-    @include gridable(100%);
-    grid-template-columns: 1fr;
-    justify-items: center;
-    padding: 120px 0 140px;
     max-width: 1174px;
+    padding: 120px 0 140px;
+
+    grid-template-columns: 1fr;
+    @include gridable(100%);
+    justify-items: center;
     @media screen and (max-width: $tablet) {
-      font-size: 12px;
       max-width: 852px;
+
+      font-size: 12px;
     }
     @media screen and (max-width: $tablet-small) {
       padding: 90px 0 115px;
@@ -292,13 +342,16 @@
     }
   }
   &__title {
-    @include title();
+    margin-bottom: 30px;
+
     font-size: 36px;
     line-height: 1.36;
-    margin-bottom: 30px;
+
+    @include title();
     @media screen and (max-width: $tablet-small) {
-      font-size: 30px;
       margin-bottom: 15px;
+
+      font-size: 30px;
     }
     @media screen and (max-width: $smartphone-small) {
       font-size: 24px;
@@ -306,16 +359,20 @@
   }
 
   &__text {
-    max-width: 994px;
-    text-align: center;
     width: 100%;
-    @include text();
+    max-width: 994px;
+    margin-bottom: 90px;
+
+    text-align: center;
+
     font-size: 24px;
     line-height: 1.65;
-    margin-bottom: 90px;
+
+    @include text();
     @media screen and (max-width: $tablet-small) {
-      font-size: 18px;
       margin-bottom: 60px;
+
+      font-size: 18px;
     }
     @media screen and (max-width: $smartphone-small) {
       font-size: 14px;
@@ -323,14 +380,16 @@
   }
 
   &__list {
-    @include gridable(100%);
-    grid-template-columns: repeat(3, 298px);
     justify-content: space-between;
+
+    grid-template-columns: repeat(3, 298px);
+    @include gridable(100%);
     @include unmarkedList(0, 0);
     row-gap: 88px;
     @media screen and (max-width: $tablet) {
-      grid-template-columns: repeat(2, 298px);
       max-width: 764px;
+
+      grid-template-columns: repeat(2, 298px);
     }
     @media screen and (max-width: $tablet-small) {
       justify-items: center;
@@ -344,11 +403,13 @@
       row-gap: 50px;
     }
     &-item {
-      @include flexible(100%);
-      max-width: 298px;
-      flex-flow: column wrap;
       align-items: center;
+      flex-flow: column wrap;
+
+      max-width: 298px;
+
       gap: 10px;
+      @include flexible(100%);
     }
   }
   &__icon {
@@ -356,18 +417,21 @@
     height: 76px;
   }
   &__subtitle {
-    @include title();
     font-size: 24px;
     line-height: 1.36;
+
+    @include title();
     @media screen and (max-width: $tablet-small) {
       font-size: 18px;
     }
   }
   &__subtext {
-    @include text();
-    font-size: 18px;
     text-align: center;
+
+    font-size: 18px;
     line-height: 1.55;
+
+    @include text();
     @media screen and (max-width: $tablet-small) {
       font-size: 14px;
     }
@@ -375,18 +439,24 @@
 }
 
 .test {
-  height: 100%;
-  background-color: $color-red;
-  align-items: center;
-  justify-items: center;
-  color: $color-white;
-  padding: 70px 20px;
   position: relative;
+
   overflow: hidden;
+  align-items: center;
+
+  height: 100%;
+  padding: 70px 20px;
+
+  color: $color-white;
+  background-color: $color-red;
+
+  justify-items: center;
   &:before {
-    content: url(./images/bg-test.png);
-    opacity: 0.2;
     position: absolute;
+
+    content: url(./images/bg-test.png);
+
+    opacity: 0.2;
   }
   @media screen and (max-width: $tablet) {
     padding-top: 60px;
@@ -397,13 +467,16 @@
     padding-bottom: 50px;
   }
   &__title {
-    @include title_48px();
     margin-bottom: 10px;
+
+    @include title_48px();
   }
   &__text {
-    @include text_18px();
-    font-weight: 500px;
     margin-bottom: 64px;
+
+    font-weight: 500px;
+
+    @include text_18px();
     @media screen and (max-width: $tablet) {
       margin-bottom: 50px;
     }
@@ -412,32 +485,40 @@
     }
   }
   &__list {
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 1088px;
+
+    font-weight: 700;
+
     @include unmarkedList(0, 0);
     @include flexible(100%);
-    justify-content: space-between;
-    align-items: center;
     @include text_18px();
-    font-weight: 700;
-    max-width: 1088px;
     @media screen and (max-width: $tablet-small) {
       flex-direction: column;
+
       text-align: center;
+
       gap: 40px;
     }
     @media screen and (max-width: $smartphone-small) {
       gap: 20px;
     }
     &-item {
-      @include flexible(auto);
       align-items: center;
       justify-content: center;
+
+      @include flexible(auto);
       &-separate {
-        content: url(./images/circle-right.png);
         width: 32px;
         height: 32px;
+
+        content: url(./images/circle-right.png);
         @media screen and (max-width: $tablet-small) {
           width: 28px;
           height: 28px;
+
           rotate: 90deg;
         }
       }
@@ -447,12 +528,14 @@
 
 .information {
   padding: 160px 20px;
-  justify-items: center;
+
   gap: 120px;
+  justify-items: center;
   @media screen and (max-width: $tablet-small) {
-    gap: 90px;
     padding-top: 90px;
     padding-bottom: 90px;
+
+    gap: 90px;
   }
   @media screen and (max-width: $smartphone-small) {
     padding-top: 60px;
@@ -461,13 +544,15 @@
   &__article {
     align-content: space-between;
     justify-content: space-between;
-    column-gap: 145px;
+
     max-width: 1197px;
-    @include gridable(100%);
+
+    column-gap: 145px;
     grid-template-areas:
       'title img'
       'txt img'
       'button img';
+    @include gridable(100%);
     @media screen and (max-width: $desktop) {
       column-gap: 100px;
     }
@@ -475,16 +560,19 @@
       column-gap: 30px;
     }
     @media screen and (max-width: $tablet-small) {
-      max-width: 500px;
       justify-content: center;
-      justify-items: center;
-      row-gap: 30px;
+
+      max-width: 500px;
+
+      text-align: center;
+
       grid-template-areas:
         'img'
         'title'
         'txt'
         'button';
-      text-align: center;
+      justify-items: center;
+      row-gap: 30px;
     }
     @media screen and (min-width: calc($tablet-small + 1px)) {
       &_reflection {
@@ -496,11 +584,14 @@
     }
   }
   &__title {
-    color: $color-dark;
-    font-weight: 700;
     margin: 0;
+
+    color: $color-dark;
+
     font-size: 64px;
+    font-weight: 700;
     line-height: 1.19;
+
     grid-area: title;
     @media screen and (max-width: $desktop) {
       font-size: 58px;
@@ -513,12 +604,15 @@
     }
   }
   &__text {
-    @include text();
+    max-width: 523px;
+
+    color: $color-gray;
+
     font-size: 16px;
     line-height: 2;
-    color: $color-gray;
+
     grid-area: txt;
-    max-width: 523px;
+    @include text();
     @media screen and (max-width: $desktop) {
       font-size: 14px;
     }
@@ -526,6 +620,7 @@
   &__image {
     width: 504px;
     height: auto;
+
     grid-area: img;
     @media screen and (max-width: $desktop) {
       width: 424px;
@@ -534,42 +629,48 @@
       align-self: end;
     }
     @media screen and (max-width: $tablet-small) {
-      max-width: 500px;
       width: 100%;
+      max-width: 500px;
     }
   }
   &__button {
-    @include button(160px, 48px, 8px);
-    grid-area: button;
     align-self: end;
+
     font-size: 14px;
+
+    grid-area: button;
+    @include button(160px, 48px, 8px);
     @media screen and (max-width: $tablet-small) {
-      max-width: auto;
       width: 100%;
+      max-width: auto;
     }
   }
 }
 
 .clients {
-  background-color: $color-gray-light;
-  justify-items: center;
   padding: 60px 20px;
+
+  background-color: $color-gray-light;
+
+  justify-items: center;
   &__title {
     @include title_48px();
   }
   &__text {
-    @include text_18px();
-    font-weight: 500;
     margin-bottom: 48px;
+
+    font-weight: 500;
+
+    @include text_18px();
   }
   &__list {
-    @include gridable(100%);
-    grid-template-columns: repeat(5, 170px);
-    @include unmarkedList(0, 0);
     justify-content: center;
-    justify-items: center;
 
     gap: 24px;
+    grid-template-columns: repeat(5, 170px);
+    @include gridable(100%);
+    @include unmarkedList(0, 0);
+    justify-items: center;
     @media screen and (max-width: $tablet) {
       grid-template-columns: repeat(3, 170px);
       grid-template-rows: repeat(3, 1fr);
@@ -584,13 +685,16 @@
     }
 
     &-item {
-      @include gridable(100%);
       align-items: center;
-      justify-items: center;
+
       width: 170px;
       height: 96px;
-      background-color: $color-white;
+
       border-radius: 16px;
+      background-color: $color-white;
+
+      @include gridable(100%);
+      justify-items: center;
       &:nth-of-type(1) {
         grid-column: 1 / 2;
         grid-row: 3 / 5;
@@ -638,8 +742,9 @@
 }
 
 .contact-us {
-  justify-items: center;
   padding: 160px 20px;
+
+  justify-items: center;
   @media screen and (max-width: $tablet-small) {
     padding-top: 90px;
     padding-bottom: 90px;
@@ -656,14 +761,18 @@
     @include title_48px();
   }
   &__text {
-    @include text_18px();
-    font-weight: 500;
     margin-bottom: 30px;
+
     text-align: center;
+
+    font-weight: 500;
+
+    @include text_18px();
   }
   &__button {
-    @include button(204px, 70px, 8px);
     font-size: 24px;
+
+    @include button(204px, 70px, 8px);
     @media screen and (max-width: $tablet-small) {
       width: 180px;
       height: 60px;
@@ -671,115 +780,136 @@
     @media screen and (max-width: $smartphone-small) {
       width: 124px;
       height: 42px;
+
       font-size: 16px;
     }
   }
 }
 
 .footer {
-  font-size: 16px;
-  background-color: $color-red;
+  align-items: center;
+
   padding: 80px 104px 70px;
+
   color: $color-white;
+  background-color: $color-red;
+
+  font-size: 16px;
+
   grid-template-areas:
     'nav nav'
     'copyright social';
   row-gap: 50px;
-  align-items: center;
   @media screen and (max-width: $desktop) {
-    padding-left: 80px;
     padding-right: 80px;
+    padding-left: 80px;
   }
   @media screen and (max-width: $tablet) {
-    padding-left: 60px;
     padding-right: 60px;
+    padding-left: 60px;
   }
   @media screen and (max-width: $smartphone) {
-    padding-left: 40px;
     padding-right: 40px;
+    padding-left: 40px;
   }
 
   @media screen and (max-width: $smartphone-small) {
+    padding-right: 20px;
+    padding-left: 20px;
+
     grid-template-areas:
       'nav'
       'social'
       'copyright';
-    padding-left: 20px;
-    padding-right: 20px;
     row-gap: 30px;
   }
   &__navigation {
-    @include gridable(100%);
+    justify-content: space-between;
+
+    max-width: 1034px;
+
     grid-area: nav;
     grid-template-columns: repeat(4, max-content);
-    justify-content: space-between;
-    max-width: 1034px;
+    @include gridable(100%);
     @media screen and (max-width: $tablet-small) {
-      grid-template-columns: repeat(2, max-content);
-      gap: 50px 100px;
       justify-content: start;
+
+      gap: 50px 100px;
+      grid-template-columns: repeat(2, max-content);
     }
     @media screen and (max-width: $smartphone) {
       column-gap: 50px;
     }
     @media screen and (max-width: $smartphone-small) {
-      grid-template-columns: 1fr;
       margin-bottom: 30px;
+
+      grid-template-columns: 1fr;
     }
   }
   &__menu {
-    color: $color-light;
-    @include unmarkedList(0, 0);
-    line-height: 2;
-    @include gridable(100%);
     align-content: start;
+
+    color: $color-light;
+
+    line-height: 2;
+
+    @include unmarkedList(0, 0);
+    @include gridable(100%);
     row-gap: 10px;
     &-item {
       &:first-child a {
-        font-weight: 700;
         color: $color-white;
+
+        font-weight: 700;
       }
     }
   }
   &__link {
-    @include link();
     color: $color-light;
+
+    @include link();
   }
   &__copyright {
-    @include text();
     grid-area: copyright;
+    @include text();
   }
   &__social-links {
+    gap: 16px;
     grid-area: social;
     @include unmarkedList(0, 0);
     @include flexible(100%);
-    gap: 16px;
   }
   &__icon {
     width: 32px;
     height: 32px;
   }
   &__link {
-    @include flexible(100%);
     align-items: center;
+
+    @include flexible(100%);
   }
 }
 
 .cross {
-  @include gridable(100%);
   align-content: space-between;
+
   box-sizing: border-box;
   width: 22px;
   height: 22px;
+
+  @include gridable(100%);
   &:before,
   &:after,
   & &__line {
-    background: $color-black;
-    content: '';
     display: block;
-    border-radius: 2px;
+
     height: 2px;
+
+    content: '';
     transition: 0.5s;
+
+    border-radius: 2px;
+    background: $color-black;
   }
   &:hover {
     &:before {
