@@ -82,7 +82,7 @@
     justify-content: flex-end;
 
     gap: 40px;
-    @include unmarkedList(0, 0);
+    @include unmarkedList();
     @include flexible(100%);
     @media screen and (max-width: $tablet-small) {
       position: fixed;
@@ -384,7 +384,7 @@
 
     grid-template-columns: repeat(3, 298px);
     @include gridable(100%);
-    @include unmarkedList(0, 0);
+    @include unmarkedList();
     row-gap: 88px;
     @media screen and (max-width: $tablet) {
       max-width: 764px;
@@ -492,7 +492,7 @@
 
     font-weight: 700;
 
-    @include unmarkedList(0, 0);
+    @include unmarkedList();
     @include flexible(100%);
     @include text_18px();
     @media screen and (max-width: $tablet-small) {
@@ -669,7 +669,7 @@
     gap: 24px;
     grid-template-columns: repeat(5, 170px);
     @include gridable(100%);
-    @include unmarkedList(0, 0);
+    @include unmarkedList();
     justify-items: center;
     @media screen and (max-width: $tablet) {
       grid-template-columns: repeat(3, 170px);
@@ -853,7 +853,7 @@
 
     line-height: 2;
 
-    @include unmarkedList(0, 0);
+    @include unmarkedList();
     @include gridable(100%);
     row-gap: 10px;
     &-item {
@@ -876,7 +876,7 @@
   &__social-links {
     gap: 16px;
     grid-area: social;
-    @include unmarkedList(0, 0);
+    @include unmarkedList();
     @include flexible(100%);
   }
   &__icon {
