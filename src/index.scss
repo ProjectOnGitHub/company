@@ -3,6 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap');
 
 .root {
+  @include gridable(100%);
+  @include basicFont();
   align-items: center;
 
   box-sizing: border-box;
@@ -10,8 +12,7 @@
   background: url(../src/images/bg-header.png) center top no-repeat;
 
   grid-template-columns: 1fr;
-  @include gridable(100%);
-  @include basicFont();
+
   justify-items: center;
   @media screen and (max-width: $tablet) {
     background-image: url(../src/images/bg-header-mid.png);
@@ -32,11 +33,11 @@ html {
 .header,
 .main,
 .footer {
+  @include gridable(100%);
   box-sizing: border-box;
   max-width: $max-width;
 
   grid-template-columns: 1fr;
-  @include gridable(100%);
 }
 
 .promo,
@@ -45,10 +46,11 @@ html {
 .information,
 .clients,
 .contact-us {
+  @include gridable(100%);
+
   box-sizing: border-box;
 
   grid-template-columns: 1fr;
-  @include gridable(100%);
 }
 
 .header {
@@ -67,6 +69,8 @@ html {
   }
 
   &__navigation {
+    @include gridable(100%);
+
     align-items: center;
     justify-content: space-between;
 
@@ -79,19 +83,19 @@ html {
 
     gap: 40px;
     grid-template-columns: 1fr min-content;
-    @include gridable(100%);
     @media screen and (max-width: $tablet-small) {
       height: $header-height-mob;
     }
   }
   &__menu {
+    @include unmarkedList();
+    @include flexible(100%);
     align-items: center;
     flex-flow: row nowrap;
     justify-content: flex-end;
 
     gap: 40px;
-    @include unmarkedList();
-    @include flexible(100%);
+
     @media screen and (max-width: $tablet-small) {
       position: fixed;
       z-index: 1;
@@ -154,14 +158,14 @@ html {
     }
   }
   &__button {
-    height: 40px;
-
     @include button(91px, 40px, 5px);
+
+    height: 40px;
   }
   &__link {
-    color: $color-black;
-
     @include link();
+
+    color: $color-black;
   }
 }
 
@@ -227,10 +231,11 @@ html {
     background-color: rgba($color-light, 0.5);
   }
   &__container {
+    @include gridable(100%);
+
     max-width: 665px;
 
     grid-template-columns: 1fr;
-    @include gridable(100%);
     @media screen and (max-width: $tablet) {
       max-width: 600px;
     }
@@ -239,13 +244,14 @@ html {
     }
   }
   &__title {
+    @include title();
+
     margin-bottom: 10px;
 
     font-size: 64px;
     font-weight: 800;
     line-height: 1.28;
 
-    @include title();
     @media screen and (max-width: $tablet) {
       font-size: 56px;
       line-height: 1.31;
@@ -258,12 +264,13 @@ html {
     }
   }
   &__text {
+    @include text();
+
     margin-bottom: 50px;
 
     font-size: 20px;
     line-height: 1.8;
 
-    @include text();
     @media screen and (max-width: $tablet) {
       max-width: 545px;
 
@@ -278,6 +285,8 @@ html {
     width: 100%;
   }
   &__fieldset {
+    @include gridable(100%);
+
     align-items: center;
 
     max-width: 502px;
@@ -287,7 +296,6 @@ html {
     border: 0;
 
     grid-template-areas: 'area';
-    @include gridable(100%);
     justify-items: end;
   }
   &__input {
@@ -309,10 +317,11 @@ html {
     }
   }
   &__button {
+    @include button(136px, 61px, 8px);
+
     margin-right: 6px;
 
     grid-area: area;
-    @include button(136px, 61px, 8px);
     @media screen and (max-width: $tablet-small) {
       height: 50px;
       margin-right: 5px;
@@ -331,11 +340,12 @@ html {
   justify-items: center;
 
   &__container {
+    @include gridable(100%);
+
     max-width: 1174px;
     padding: 120px 0 140px;
 
     grid-template-columns: 1fr;
-    @include gridable(100%);
     justify-items: center;
     @media screen and (max-width: $tablet) {
       max-width: 852px;
@@ -350,12 +360,13 @@ html {
     }
   }
   &__title {
+    @include title();
+
     margin-bottom: 30px;
 
     font-size: 36px;
     line-height: 1.36;
 
-    @include title();
     @media screen and (max-width: $tablet-small) {
       margin-bottom: 15px;
 
@@ -367,6 +378,8 @@ html {
   }
 
   &__text {
+    @include text();
+
     width: 100%;
     max-width: 994px;
     margin-bottom: 90px;
@@ -376,7 +389,6 @@ html {
     font-size: 24px;
     line-height: 1.65;
 
-    @include text();
     @media screen and (max-width: $tablet-small) {
       margin-bottom: 60px;
 
@@ -388,11 +400,12 @@ html {
   }
 
   &__list {
+    @include gridable(100%);
+    @include unmarkedList();
     justify-content: space-between;
 
     grid-template-columns: repeat(3, 298px);
-    @include gridable(100%);
-    @include unmarkedList();
+
     row-gap: 88px;
     @media screen and (max-width: $tablet) {
       max-width: 764px;
@@ -411,16 +424,19 @@ html {
       row-gap: 50px;
     }
     &-item {
+      @include flexible(100%);
+
       align-items: center;
       flex-flow: column wrap;
 
       max-width: 298px;
 
       gap: 10px;
-      @include flexible(100%);
     }
   }
   &__icon {
+    @include title();
+
     width: 76px;
     height: 76px;
   }
@@ -428,18 +444,18 @@ html {
     font-size: 24px;
     line-height: 1.36;
 
-    @include title();
     @media screen and (max-width: $tablet-small) {
       font-size: 18px;
     }
   }
   &__subtext {
+    @include text();
+
     text-align: center;
 
     font-size: 18px;
     line-height: 1.55;
 
-    @include text();
     @media screen and (max-width: $tablet-small) {
       font-size: 14px;
     }
@@ -475,16 +491,17 @@ html {
     padding-bottom: 50px;
   }
   &__title {
-    margin-bottom: 10px;
-
     @include title_48px();
+
+    margin-bottom: 10px;
   }
   &__text {
+    @include text_18px();
+
     margin-bottom: 64px;
 
     font-weight: 500px;
 
-    @include text_18px();
     @media screen and (max-width: $tablet) {
       margin-bottom: 50px;
     }
@@ -493,6 +510,9 @@ html {
     }
   }
   &__list {
+    @include unmarkedList();
+    @include flexible(100%);
+    @include text_18px();
     align-items: center;
     justify-content: space-between;
 
@@ -500,9 +520,6 @@ html {
 
     font-weight: 700;
 
-    @include unmarkedList();
-    @include flexible(100%);
-    @include text_18px();
     @media screen and (max-width: $tablet-small) {
       flex-direction: column;
 
@@ -514,10 +531,11 @@ html {
       gap: 20px;
     }
     &-item {
+      @include flexible(auto);
+
       align-items: center;
       justify-content: center;
 
-      @include flexible(auto);
       &-separate {
         width: 32px;
         height: 32px;
@@ -550,6 +568,8 @@ html {
     padding-bottom: 60px;
   }
   &__article {
+    @include gridable(100%);
+
     align-content: space-between;
     justify-content: space-between;
 
@@ -560,7 +580,6 @@ html {
       'title img'
       'txt img'
       'button img';
-    @include gridable(100%);
     @media screen and (max-width: $desktop) {
       column-gap: 100px;
     }
@@ -612,6 +631,8 @@ html {
     }
   }
   &__text {
+    @include text();
+
     max-width: 523px;
 
     color: $color-gray;
@@ -620,7 +641,6 @@ html {
     line-height: 2;
 
     grid-area: txt;
-    @include text();
     @media screen and (max-width: $desktop) {
       font-size: 14px;
     }
@@ -642,12 +662,13 @@ html {
     }
   }
   &__button {
+    @include button(160px, 48px, 8px);
+
     align-self: end;
 
     font-size: 14px;
 
     grid-area: button;
-    @include button(160px, 48px, 8px);
     @media screen and (max-width: $tablet-small) {
       width: 100%;
       max-width: auto;
@@ -665,19 +686,20 @@ html {
     @include title_48px();
   }
   &__text {
+    @include text_18px();
+
     margin-bottom: 48px;
 
     font-weight: 500;
-
-    @include text_18px();
   }
   &__list {
+    @include gridable(100%);
+    @include unmarkedList();
     justify-content: center;
 
     gap: 24px;
     grid-template-columns: repeat(5, 170px);
-    @include gridable(100%);
-    @include unmarkedList();
+
     justify-items: center;
     @media screen and (max-width: $tablet) {
       grid-template-columns: repeat(3, 170px);
@@ -693,6 +715,8 @@ html {
     }
 
     &-item {
+      @include gridable(100%);
+
       align-items: center;
 
       width: 170px;
@@ -701,7 +725,6 @@ html {
       border-radius: 16px;
       background-color: $color-white;
 
-      @include gridable(100%);
       justify-items: center;
       &:nth-of-type(1) {
         grid-column: 1 / 2;
@@ -769,18 +792,19 @@ html {
     @include title_48px();
   }
   &__text {
+    @include text_18px();
+
     margin-bottom: 30px;
 
     text-align: center;
 
     font-weight: 500;
-
-    @include text_18px();
   }
   &__button {
+    @include button(204px, 70px, 8px);
+
     font-size: 24px;
 
-    @include button(204px, 70px, 8px);
     @media screen and (max-width: $tablet-small) {
       width: 180px;
       height: 60px;
@@ -832,13 +856,14 @@ html {
     row-gap: 30px;
   }
   &__navigation {
+    @include gridable(100%);
+
     justify-content: space-between;
 
     max-width: 1034px;
 
     grid-area: nav;
     grid-template-columns: repeat(4, max-content);
-    @include gridable(100%);
     @media screen and (max-width: $tablet-small) {
       justify-content: start;
 
@@ -855,14 +880,14 @@ html {
     }
   }
   &__menu {
+    @include unmarkedList();
+    @include gridable(100%);
     align-content: start;
 
     color: $color-light;
 
     line-height: 2;
 
-    @include unmarkedList();
-    @include gridable(100%);
     row-gap: 10px;
     &-item {
       &:first-child a {
@@ -873,39 +898,41 @@ html {
     }
   }
   &__link {
-    color: $color-light;
-
     @include link();
+
+    color: $color-light;
   }
   &__copyright {
-    grid-area: copyright;
     @include text();
+
+    grid-area: copyright;
   }
   &__social-links {
-    gap: 16px;
-    grid-area: social;
     @include unmarkedList();
     @include flexible(100%);
+    gap: 16px;
+    grid-area: social;
   }
   &__icon {
     width: 32px;
     height: 32px;
   }
   &__link {
-    align-items: center;
-
     @include flexible(100%);
+
+    align-items: center;
   }
 }
 
 .cross {
+  @include gridable(100%);
+
   align-content: space-between;
 
   box-sizing: border-box;
   width: 22px;
   height: 22px;
 
-  @include gridable(100%);
   &:before,
   &:after,
   & &__line {
