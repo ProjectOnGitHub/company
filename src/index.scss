@@ -21,6 +21,14 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.scroll-lock {
+  overflow: hidden;
+}
+
 .header,
 .main,
 .footer {
@@ -177,7 +185,7 @@
     opacity: 0;
     background: #292929;
     &_active {
-      right: 0;
+      left: 0;
 
       visibility: visible;
 
@@ -911,14 +919,14 @@
     border-radius: 2px;
     background: $color-black;
   }
-  &:hover {
+  &_active {
     &:before {
       transform: translateY(10px) rotate(135deg);
     }
     &::after {
       transform: translateY(-9.5px) rotate(-135deg);
     }
-    &:hover .cross__line {
+    & .cross__line {
       transform: scale(0);
     }
   }
